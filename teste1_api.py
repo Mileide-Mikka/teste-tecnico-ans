@@ -1,7 +1,6 @@
 """
 TESTE 1: Baixar e processar dados da ANS
-Autora: [Seu Nome] - Estudante do 3º semestre
-Data: [Data de hoje]
+Autora: Mileide Silva de Arruda
 """
 
 import requests
@@ -74,7 +73,7 @@ def baixar_arquivo(url, nome_arquivo):
         return False
 
 # Na prática, a API da ANS não é tão simples
-# Vamos simular com dados de exemplo para o teste
+# Vou simular com dados de exemplo para o teste
 print("   ⚠️  AVISO: A API real da ANS é complexa.")
 print("   Para este teste, vou criar arquivos de exemplo.")
 print("   Na vida real, você usaria requests.get() na URL da ANS.")

@@ -1,11 +1,11 @@
 """
 TESTE 4: API e Interface Web
-Autora: [Seu Nome] - Estudante do 3º semestre
+Autora: Mileide Silva de Arruda
 
 Para executar:
 1. Instale: pip install flask flask-cors
 2. Execute: python teste4_api.py
-3. Abra: http://localhost:5000
+3. Abra: http://localhost:5001
 """
 
 from flask import Flask, jsonify, request

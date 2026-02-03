@@ -1,6 +1,6 @@
 /*
 TESTE 3: Banco de Dados PostgreSQL
-Autora: Mileide Silva de Arrudao
+Autora: Mileide Silva de Arruda
 
 */
 
@@ -98,7 +98,7 @@ ON despesas(valor_despesas DESC);
 -- PASSO 3: Importando dados de exemplo...
 
 -- Inserir operadoras de exemplo
-INSERT INTO operadoras (cnpj, registro_ans, razao_social, modalidade, uf) VALUES
+INSERT INTO operadoras (cnpj, registro_ans, razao_social, modalidade, UF) VALUES
 ('11222333000144', '123456', 'Hospital Sao Paulo', 'Hospitalar', 'SP'),
 ('22333444000155', '234567', 'Clinica Saude Total', 'Ambulatorial', 'RJ'),
 ('33444555000166', '345678', 'Laboratorio Diagnostico', 'Diagnóstico', 'MG')

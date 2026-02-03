@@ -1,6 +1,6 @@
 """
 TESTE 2: Validar e enriquecer dados
-Autora: [Seu Nome] - Estudante do 3º semestre
+Autora: Mileide Silva de Arruda
 """
 
 import pandas as pd
