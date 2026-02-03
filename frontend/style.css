@@ -1,0 +1,271 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ body {
+     background-color: #f5f7fa;
+     color: #333;
+     padding: 20px;
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ header {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     color: white;
+     padding: 30px;
+     border-radius: 15px;
+     margin-bottom: 30px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ h1 {
+     font-size: 2.5em;
+     margin-bottom: 10px;
+ }
+
+ .subtitle {
+     font-size: 1.1em;
+     opacity: 0.9;
+ }
+
+ .container {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 30px;
+ }
+
+ .card {
+     background: white;
+     padding: 25px;
+     border-radius: 15px;
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+ }
+
+ .card h2 {
+     color: #667eea;
+     margin-bottom: 20px;
+     padding-bottom: 10px;
+     border-bottom: 2px solid #f0f0f0;
+ }
+
+ /* BUSCA */
+ .search-box {
+     display: flex;
+     gap: 10px;
+     margin-bottom: 20px;
+ }
+
+ .search-box input {
+     flex: 1;
+     padding: 12px 20px;
+     border: 2px solid #e0e0e0;
+     border-radius: 10px;
+     font-size: 16px;
+     transition: all 0.3s;
+ }
+
+ .search-box input:focus {
+     outline: none;
+     border-color: #667eea;
+     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+ }
+
+ .search-box button {
+     padding: 12px 25px;
+     background: #667eea;
+     color: white;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     font-weight: bold;
+     transition: all 0.3s;
+ }
+
+ .search-box button:hover {
+     background: #5a67d8;
+     transform: translateY(-2px);
+ }
+
+ /* TABELA */
+ .table-container {
+     overflow-x: auto;
+ }
+
+ table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+
+ th {
+     background-color: #f8f9fa;
+     padding: 15px;
+     text-align: left;
+     font-weight: 600;
+     color: #495057;
+     border-bottom: 2px solid #e9ecef;
+ }
+
+ td {
+     padding: 15px;
+     border-bottom: 1px solid #e9ecef;
+ }
+
+ tr:hover {
+     background-color: #f8f9fa;
+ }
+
+ .cnpj {
+     font-family: monospace;
+     background-color: #f1f3f5;
+     padding: 3px 8px;
+     border-radius: 4px;
+     font-size: 0.9em;
+ }
+
+ .valor {
+     font-weight: 600;
+     color: #2b6cb0;
+ }
+
+ /* PAGINAÇÃO */
+ .pagination {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+     margin-top: 20px;
+     padding-top: 20px;
+     border-top: 1px solid #e9ecef;
+ }
+
+ .pagination button {
+     padding: 8px 16px;
+     background: #667eea;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: all 0.3s;
+ }
+
+ .pagination button:disabled {
+     background: #cbd5e0;
+     cursor: not-allowed;
+ }
+
+ .pagination span {
+     font-weight: 600;
+ }
+
+ /* GRÁFICO */
+ .chart-container {
+     height: 300px;
+     position: relative;
+ }
+
+ .chart-placeholder {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100%;
+     background: #f8f9fa;
+     border-radius: 10px;
+     color: #6c757d;
+ }
+
+ .chart-placeholder .icon {
+     font-size: 3em;
+     margin-bottom: 10px;
+ }
+
+ /* ESTADOS */
+ .loading,
+ .error {
+     text-align: center;
+     padding: 40px;
+     font-size: 1.2em;
+ }
+
+ .loading {
+     color: #667eea;
+ }
+
+ .error {
+     color: #e53e3e;
+ }
+
+ /* DETALHES */
+ .details-card {
+     margin-top: 20px;
+     background: #f8f9fa;
+     padding: 20px;
+     border-radius: 10px;
+ }
+
+ .details-card h3 {
+     color: #495057;
+     margin-bottom: 15px;
+ }
+
+ .stats-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 15px;
+ }
+
+ .stat-item {
+     background: white;
+     padding: 15px;
+     border-radius: 10px;
+     text-align: center;
+ }
+
+ .stat-value {
+     font-size: 1.8em;
+     font-weight: bold;
+     color: #667eea;
+     margin: 10px 0;
+ }
+
+ .stat-label {
+     font-size: 0.9em;
+     color: #6c757d;
+ }
+
+ /* FOOTER */
+ footer {
+     text-align: center;
+     margin-top: 40px;
+     padding-top: 20px;
+     border-top: 1px solid #e9ecef;
+     color: #6c757d;
+     font-size: 0.9em;
+ }
+
+ /* RESPONSIVO */
+ @media (max-width: 768px) {
+     body {
+         padding: 10px;
+     }
+
+     header {
+         padding: 20px;
+     }
+
+     h1 {
+         font-size: 2em;
+     }
+
+     .search-box {
+         flex-direction: column;
+     }
+
+     .stats-grid {
+         grid-template-columns: 1fr;
+     }
+ }

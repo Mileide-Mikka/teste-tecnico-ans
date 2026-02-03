@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadoras de Saúde - ANS</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🏥 Operadoras de Saúde - ANS</h1>
+        <p class="subtitle">Visualização de despesas com eventos/sinistros</p>
+        <p class="subtitle">Desenvolvido por Mileide Silda de Arruda</p>
+    </header>
+
+    <div class="container">
+        <!-- CARD 1: BUSCA E LISTAGEM -->
+        <div class="card">
+            <h2>🔍 Busca de Operadoras</h2>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Digite o nome da operadora ou CNPJ..."
+                    onkeyup="filtrarTabela()">
+                <button onclick="carregarDados()">Atualizar Dados</button>
+            </div>
+
+            <div id="loading" class="loading" style="display: none;">
+                ⏳ Carregando dados...
+            </div>
+
+            <div id="error" class="error" style="display: none;">
+                ❌ Erro ao carregar dados
+            </div>
+
+            <div class="table-container" id="tableContainer">
+                <table id="operadorasTable">
+                    <thead>
+                        <tr>
+                            <th>Razão Social</th>
+                            <th>CNPJ</th>
+                            <th>UF</th>
+                            <th>Despesas (R$)</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Os dados serão inseridos aqui pelo JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination" id="pagination">
+                <button onclick="mudarPagina(-1)" id="prevBtn" disabled>← Anterior</button>
+                <span id="pageInfo">Página 1 de 1</span>
+                <button onclick="mudarPagina(1)" id="nextBtn" disabled>Próxima →</button>
+            </div>
+        </div>
+
+        <!-- CARD 2: GRÁFICO DE DISTRIBUIÇÃO -->
+        <div class="card">
+            <h2>📊 Distribuição por Estado (UF)</h2>
+            <div class="chart-container">
+                <div class="chart-placeholder" id="chartPlaceholder">
+                    <div class="icon">📈</div>
+                    <p>Clique em "Ver Detalhes" em uma operadora para ver o gráfico</p>
+                </div>
+                <canvas id="ufChart" style="display: none;"></canvas>
+            </div>
+        </div>
+
+        <!-- CARD 3: DETALHES DA OPERADORA -->
+        <div class="card" id="detailsCard" style="display: none;">
+            <h2>👁️ Detalhes da Operadora</h2>
+            <div id="detailsContent">
+                <!-- Detalhes serão inseridos aqui -->
+            </div>
+        </div>
+
+        <!-- CARD 4: ESTATÍSTICAS GERAIS -->
+        <div class="card">
+            <h2>📈 Estatísticas Gerais</h2>
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-item">
+                    <div class="stat-label">Total de Operadoras</div>
+                    <div class="stat-value" id="totalOperadoras">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Despesas Totais</div>
+                    <div class="stat-value" id="totalDespesas">R$ 0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Média por Operadora</div>
+                    <div class="stat-value" id="mediaDespesas">R$ 0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Teste Técnico - Intuitive Care | Desenvolvido com Flask e Vue.js (simplificado)</p>
+        <p>E-mail: mileydesilvaarruda@gmail.com | Contato: (XX) XXXXX-XXXX</p>
+    </footer>
+
+</body>
+
+</html>
